@@ -39,6 +39,7 @@ def make_prediction(img_file):
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+application = app.server
 server = app.server
 app.title=tabtitle
 
@@ -74,4 +75,4 @@ def update_output_div(clicks):
 
 ############ Deploy
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    application.run_server(debug=True, port=8080)
