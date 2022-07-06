@@ -5,7 +5,6 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 
 # https://stackoverflow.com/questions/67711358/valueerror-attempt-to-convert-a-value-none-with-an-unsupported-type-class/68049002#68049002
