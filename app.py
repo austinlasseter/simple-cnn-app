@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
-
+# https://stackoverflow.com/questions/67711358/valueerror-attempt-to-convert-a-value-none-with-an-unsupported-type-class/68049002#68049002
 
 ########### Define your variables ######
 
@@ -58,14 +58,11 @@ app.layout = html.Div([
 
 ])
 
-
-
-
 @app.callback(
     Output(component_id='output-div', component_property='children'),
     Input(component_id='submit-val', component_property='n_clicks'),
     )
-def update_output_div(clicks, input_value):
+def update_output_div(clicks):
 
     if clicks==0:
         return "waiting for inputs"
